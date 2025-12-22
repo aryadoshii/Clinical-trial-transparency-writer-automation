@@ -9,7 +9,7 @@
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Accuracy](https://img.shields.io/badge/Accuracy-94.7%25-brightgreen.svg)
 
-[Overview](#-overview) • [Features](#-key-features) • [Architecture](#️-system-architecture) • [Installation](#-quick-start) • [Performance](#-performance-metrics) • [Documentation](#-documentation)
+[Overview](#-overview) • [Features](#-key-features) • [Architecture](#️-system-architecture) • [Performance](#-performance-metrics)
 
 </div>
 
@@ -102,7 +102,10 @@ Regulatory Compliant
 
 ## 🏗️ System Architecture
 
-![System Architecture](images/system_architecture.png)
+![System Architecture](system_architecture.png)
+
+**TrialTransparency.Ai employs a modular, layered architecture that separates concerns while maintaining high cohesion.** The system processes clinical trial data through four distinct layers—ingestion, validation, explainability, and analytics—each optimized for its specific function. This design enables independent scaling of compute-intensive components (like LLM processing) while keeping deterministic validation lightweight and fast. The hybrid approach ensures that 95%+ of validations complete via rules-based checks, with LLM resources reserved exclusively for generating human-readable explanations.
+
 
 ### Data Flow Overview
 
@@ -188,87 +191,6 @@ graph TB
 
 ---
 
-## 🚀 Quick Start
-
-### Prerequisites
-
-```bash
-Python 3.10+
-PostgreSQL 12+
-8GB RAM minimum
-4GB disk space
-```
-
-### Installation
-
-```bash
-# 1. Clone repository
-git clone https://github.com/aryadoshii/Clinical-trial-transparency-writer-automation.git
-cd Clinical-trial-transparency-writer-automation
-
-# 2. Create virtual environment
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
-
-# 3. Install dependencies
-pip install -r requirements.txt
-
-# 4. Set up database
-psql -U postgres -f sql/schema.sql
-
-# 5. Configure environment
-cp .env.example .env
-# Edit .env with your API keys and database credentials
-
-# 6. Download sample data
-bash download_data.sh
-```
-
-### Basic Usage
-
-```python
-from src.validator_core import TrialValidator
-from src.explanation_engine import ExplainabilityEngine
-
-# Initialize system
-validator = TrialValidator()
-explainer = ExplainabilityEngine(model="mixtralai/Mixtral-8x7B-Instruct-v0.1")
-
-# Load and validate trial data
-trial_data = validator.load_trial("data/NCT00000102.xml")
-errors = validator.validate(trial_data)
-
-# Generate role-specific explanations
-for error in errors:
-    explanation = explainer.explain(
-        error, 
-        role="data_manager"  # Options: "data_manager", "regulator", "clinician"
-    )
-    print(f"\n{error['field']}: {error['type']}")
-    print(f"Explanation: {explanation['explanation']}")
-    print(f"Resolution: {', '.join(explanation['resolution_steps'])}")
-```
-
-### Docker Deployment
-
-```bash
-# Build image
-docker build -t trialtransparency:latest .
-
-# Run container
-docker run -d \
-  -p 8080:8080 \
-  -v $(pwd)/data:/app/data \
-  -v $(pwd)/output:/app/output \
-  --env-file .env \
-  trialtransparency:latest
-
-# Check logs
-docker logs -f <container_id>
-```
-
----
-
 ## 📊 Performance Metrics
 
 ### Validation Accuracy Comparison
@@ -324,7 +246,7 @@ docker logs -f <container_id>
 
 ### Processing Time Breakdown
 
-![Processing Time Comparison](images/processing_time_chart.png)
+![Processing Time Comparison](processing_time_chart.png)
 
 <table>
 <thead>
@@ -434,7 +356,7 @@ TrialTransparency.Ai leverages **LangChain** for structured LLM orchestration, e
 
 ### Visualization of Detected Errors
 
-![Error Detection Flow](images/error_detection_flow.png)
+![Error Detection Flow](error_detection_flow.png)
 
 ---
 
@@ -587,7 +509,7 @@ class TrialDurationRule(ValidationRule):
 
 ### Real-Time Dashboard
 
-![Dashboard Screenshot](images/dashboard_screenshot.png)
+![Dashboard Screenshot](dashboard_screenshot_1.png)
 
 Track key metrics:
 - Validation throughput (trials/hour)
@@ -689,16 +611,6 @@ pytest tests/benchmarks/ --benchmark-only
 <a href="mailto:chinmay.inamdar22@vit.edu">📧</a>
 <a href="https://github.com/ChinmayInamdar">🐙</a>
 </td>
-<td align="center">
-<img src="https://via.placeholder.com/100" width="100px;" alt="Tanmay Gote"/><br />
-<sub><b>Tanmay Gote</b></sub><br />
-<a href="mailto:tanmay.gote22@vit.edu">📧</a>
-</td>
-<td align="center">
-<img src="https://via.placeholder.com/100" width="100px;" alt="Swati Shilaskar"/><br />
-<sub><b>Swati Shilaskar</b></sub><br />
-<a href="mailto:swati.shilaskar@vit.edu">📧</a>
-</td>
 </tr>
 </table>
 
@@ -765,51 +677,11 @@ git push origin feature/amazing-feature
 
 ## 📞 Support & Contact
 
-### Get Help
-
-- 📚 [Documentation](https://github.com/aryadoshii/Clinical-trial-transparency-writer-automation/wiki)
-- 💬 [Discussions](https://github.com/aryadoshii/Clinical-trial-transparency-writer-automation/discussions)
-- 🐛 [Issue Tracker](https://github.com/aryadoshii/Clinical-trial-transparency-writer-automation/issues)
-
 ### Contact the Team
 
 - 📧 Email: [arya.doshi22@vit.edu](mailto:arya.doshi22@vit.edu)
 - 💼 LinkedIn: [Arya Doshi](https://linkedin.com/in/aryadoshii)
-- 🐦 Twitter: [@aryadoshii](https://twitter.com/aryadoshii)
 
 ---
-
-## 🙏 Acknowledgments
-
-- **Mixtral-8x7B** by Mistral AI for powerful open-source LLM
-- **LangChain** for excellent LLM orchestration framework
-- **ClinicalTrials.gov** for providing open clinical trial data
-- **VIT Pune** for academic support and resources
-
----
-
-## 📊 Citation
-
-If you use TrialTransparency.Ai in your research, please cite:
-
-```bibtex
-@software{trialtransparency2025,
-  title = {TrialTransparency.Ai: Hybrid Rules-Based + LLM-Powered Clinical Trial Validation},
-  author = {Doshi, Arya and Inamdar, Chinmay and Gote, Tanmay and Shilaskar, Swati},
-  year = {2025},
-  url = {https://github.com/aryadoshii/Clinical-trial-transparency-writer-automation},
-  institution = {Vishwakarma Institute of Technology, Pune}
-}
-```
-
----
-
-<div align="center">
-
-### ⭐ Star this repository if you found it helpful!
-
-**Built with ❤️ by the TrialTransparency.Ai Team**
-
-[Report Bug](https://github.com/aryadoshii/Clinical-trial-transparency-writer-automation/issues) • [Request Feature](https://github.com/aryadoshii/Clinical-trial-transparency-writer-automation/issues) • [Documentation](https://github.com/aryadoshii/Clinical-trial-transparency-writer-automation/wiki)
 
 </div>
