@@ -507,7 +507,7 @@ class TrialDurationRule(ValidationRule):
 
 ## 📈 Monitoring & Analytics
 
-### Real-Time Dashboard
+### Dashboard Dummy
 
 ![Dashboard Screenshot](dashboard_screenshot_1.png)
 
