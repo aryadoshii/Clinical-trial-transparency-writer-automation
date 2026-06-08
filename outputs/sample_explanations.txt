@@ -1,0 +1,120 @@
+NCT ID    : NCT00002113
+Field     : start_date
+Error Type: MISSING_FIELD
+Severity  : HIGH
+Explanation:
+**Issue: MISSING_FIELD field=start_date**
+
+1. **Problem:** The start date of the trial is missing, which means we don't know when the study began. This makes it difficult to track the study's progress, participant enrollment, and overall study duration.
+2. **Corrective Action:** The most likely corrective action is to retrieve the missing start date from the study records or protocol documents and update the database accordingly.
+3. **Regulatory Implications:** This issue has implications under ICH E6 (Good Clinical Practice) and FDA 21 CFR Part 11, which require accurate and complete recording of study data, including essential dates like the start date. Failure to maintain accurate records can lead to regulatory non-compliance and potentially impact the study's validity.
+---
+NCT ID    : NCT00002113
+Field     : primary_outcomes
+Error Type: MISSING_FIELD
+Severity  : CRITICAL
+Explanation:
+Issue: [MISSING_FIELD] field=primary_outcomes
+
+1. **Problem**: The primary outcomes of the trial are not specified. This is a problem because primary outcomes are the main goals of the study, and without them, it's unclear what the trial is trying to achieve or measure.
+
+2. **Corrective Action**: The most likely corrective action is to add the primary outcomes to the trial documentation. This could involve reviewing the study protocol and adding the specific outcomes that the trial is intended to measure, such as "survival rate" or "symptom reduction".
+
+3. **Regulatory Implications**: The FDA and ICH E6 guidelines require that clinical trials have clear, predefined primary outcomes. Not having this information could lead to issues with trial approval, conduct, or acceptance of results by regulatory authorities (e.g. FDA 21 CFR Part 11, ICH E6 Section 6.8).
+---
+NCT ID    : NCT00002113
+Field     : primary_outcomes
+Error Type: CROSS_FIELD_INCONSISTENCY
+Severity  : HIGH
+Explanation:
+**Data Quality Issue: CROSS_FIELD_INCONSISTENCY in primary_outcomes**
+
+1. **Problem:** The problem is that there is inconsistent information in the primary outcomes field, which means that the data does not match or is contradictory. This can lead to confusion and inaccurate conclusions about the trial results.
+
+2. **Corrective Action:** The most likely corrective action is to review and verify the primary outcomes data against the original protocol and source documents, and then make corrections to ensure consistency and accuracy.
+
+3. **Regulatory Implications:** This issue has implications under ICH E6 (Good Clinical Practice) and FDA 21 CFR Part 11 (Electronic Records and Signatures), which emphasize the importance of data accuracy, completeness, and consistency. Resolving this issue is crucial to ensure the reliability and integrity of the trial data, and to maintain compliance with regulatory requirements.
+---
+NCT ID    : NCT00004110
+Field     : start_date
+Error Type: MISSING_FIELD
+Severity  : HIGH
+Explanation:
+**Issue: Missing field - start_date**
+
+1. **Problem**: The start date of the trial is not recorded. This is a problem because it's essential to know when the trial began to track its progress, analyze data, and ensure participant safety.
+2. **Corrective action**: The most likely corrective action is to retrieve the missing start date information from alternative sources, such as study documents or participant records, and update the database accordingly.
+3. **Regulatory implications**: This issue has implications under ICH E6 (Good Clinical Practice) and FDA 21 CFR Part 11 (Electronic Records), which require accurate and complete recording of clinical trial data, including essential dates like the start date. Failure to correct this issue may lead to audit findings or regulatory action.
+---
+NCT ID    : NCT00004110
+Field     : primary_outcomes
+Error Type: MISSING_FIELD
+Severity  : CRITICAL
+Explanation:
+**Issue: MISSING_FIELD field=primary_outcomes**
+
+1. **Problem**: The primary outcomes of the trial are not specified. This is a problem because primary outcomes are the main goals of the trial, and without them, it's unclear what the trial is trying to achieve or measure.
+2. **Corrective Action**: Update the trial record with the specific primary outcomes, such as "overall survival" or "tumor response rate", to ensure clarity on the trial's objectives.
+3. **Regulatory Implications**: This issue has implications under ICH E6 (Good Clinical Practice) guidelines, which require that clinical trials have clear objectives and outcomes. The FDA also requires that trial registries, such as ClinicalTrials.gov, include primary outcomes (21 CFR Part 11, 42 CFR Part 11).
+---
+NCT ID    : NCT00004110
+Field     : enrollment
+Error Type: MISSING_FIELD
+Severity  : HIGH
+Explanation:
+**Issue: MISSING_FIELD field=enrollment**
+
+1. **Problem**: The enrollment field is missing, which means we don't know how many patients were recruited for the trial. This information is crucial for understanding the trial's progress and results.
+2. **Corrective Action**: The most likely corrective action is to retrieve the enrollment data from the trial database or source documents and update the missing field. This may involve contacting the trial site or investigators to obtain the necessary information.
+3. **Regulatory Implications**: This issue has implications under ICH E6 (Good Clinical Practice) and FDA 21 CFR Part 11 (Electronic Records and Signatures), which require that clinical trial data be accurate, complete, and reliable. The missing enrollment data may affect the trial's integrity and compliance with regulatory requirements, potentially leading to delays or even trial termination if not addressed promptly.
+---
+NCT ID    : NCT00004110
+Field     : primary_outcomes
+Error Type: CROSS_FIELD_INCONSISTENCY
+Severity  : HIGH
+Explanation:
+**Issue: CROSS_FIELD_INCONSISTENCY in primary_outcomes**
+
+1. **Problem:** This issue means that there's a disagreement between different fields of data related to the primary outcomes of the trial. This inconsistency can lead to confusion and incorrect conclusions about the trial's results.
+
+2. **Corrective Action:** Review the trial protocol and data collection forms to identify the source of the inconsistency. Verify the primary outcomes data against the original records, and make corrections as needed to ensure consistency across all fields.
+
+3. **Regulatory Implications:** This issue is relevant to ICH E6 (International Council for Harmonisation of Technical Requirements for Pharmaceuticals for Human Use) guidelines, which emphasize the importance of data quality and accuracy in clinical trials. The FDA's 21 CFR Part 11 regulations also require that electronic records be accurate, complete, and consistent, which includes ensuring data consistency across different fields. Resolving this issue is essential to maintain compliance with these regulations and ensure the reliability of the trial results.
+---
+NCT ID    : NCT00016718
+Field     : start_date
+Error Type: MISSING_FIELD
+Severity  : HIGH
+Explanation:
+For the issue: 
+- [MISSING_FIELD] field=start_date
+
+1. **Problem Explanation**: The start date of the trial is missing. This is a problem because it's essential to know when the trial began to track its progress, assess the duration of participant exposure to the treatment, and evaluate the effectiveness of the treatment over time.
+
+2. **Corrective Action**: The most likely corrective action would be to retrieve the missing start date information from available documents, such as the trial protocol, participant records, or study logs, and update the database accordingly.
+
+3. **Regulatory Implications**: The absence of critical data like start dates has implications under regulations such as ICH E6 (Good Clinical Practice) and FDA 21 CFR Part 11 (electronic records and signatures), which require that clinical trials maintain accurate, complete, and reliable records. Ensuring the completeness of trial data is crucial for compliance with these regulations and for the integrity of the trial results.
+---
+NCT ID    : NCT00023218
+Field     : primary_outcomes
+Error Type: MISSING_FIELD
+Severity  : CRITICAL
+Explanation:
+**Issue: Missing primary outcomes field**
+
+1. **Problem:** The trial is missing information about its primary outcomes, which are the main goals or measurements of the study's success. This makes it difficult to understand what the study is trying to achieve or measure.
+2. **Corrective action:** The most likely corrective action is to update the trial record with the primary outcomes, which could include specific measurements such as changes in liver histology, lactic acidemia levels, or ALT elevations.
+3. **Regulatory implications:** This issue has implications under ICH E6 (International Council for Harmonisation of Technical Requirements for Pharmaceuticals for Human Use) guidelines, which require that clinical trials have clear, predefined outcomes. In the US, the FDA (Food and Drug Administration) also requires that clinical trials have well-defined outcomes, as stated in 21 CFR Part 11 (Electronic Records and Signatures). Resolving this issue is essential to ensure the trial's integrity and compliance with regulatory requirements.
+---
+NCT ID    : NCT00023582
+Field     : primary_outcomes
+Error Type: MISSING_FIELD
+Severity  : CRITICAL
+Explanation:
+**Issue: MISSING_FIELD field=primary_outcomes**
+
+1. **Problem:** The trial is missing information on its primary outcomes, which are the main goals or questions the trial aims to answer. This lack of information makes it difficult to understand what the trial is trying to achieve and how its success will be measured.
+
+2. **Corrective Action:** The most likely corrective action is to update the trial record with the primary outcomes, which should be clearly defined and measurable. This information should be readily available from the trial protocol or study plan.
+
+3. **Regulatory Implications:** The FDA and other regulatory agencies, such as those following ICH E6 guidelines, require trials to have well-defined primary outcomes to ensure the trial is conducted properly and the results are meaningful. Not having this information may lead to delays or issues with trial approval or publication. Specifically, ICH E6 Section 6.3 emphasizes the importance of clear trial objectives, which include primary outcomes. Additionally, FDA 21 CFR Part 11 requires electronic records to be accurate, complete, and retrievable, which includes having complete information on trial outcomes.
