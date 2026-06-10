@@ -2,7 +2,8 @@
 
 > Clinical trial data validation — deterministic rules meet LLM explainability.
 
-Built against the ClinicalTrials.gov v2 API. On 500 trials with seeded synthetic error injection: **Recall = 0.961**, **F1 = 0.555**, **FORMAT_ERROR F1 = 0.926**.
+Built against the ClinicalTrials.gov v2 API. On 500 trials with seeded synthetic error injection: 
+**Recall = 0.961**, **F1 = 0.555**, **FORMAT_ERROR F1 = 0.926**.
 
 ---
 
