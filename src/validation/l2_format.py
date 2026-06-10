@@ -17,7 +17,7 @@ class FormatFinding:
     nct_id: str
     field: str
     bad_value: str
-    severity: str = "ERROR"
+    severity: str = "HIGH"
     error_type: str = "FORMAT_ERROR"
 
 

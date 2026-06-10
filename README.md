@@ -8,6 +8,27 @@ detection at F1=0.926.
 
 ---
 
+## Dashboard
+
+The Streamlit dashboard (`streamlit_app.py`) provides a browser UI for the full
+validation pipeline — select a trial from the database or upload an XML/JSON file,
+watch each validation layer run in sequence, inspect findings with LLM
+explanations, and download the original or auto-corrected record.
+
+**Validation pipeline & input panel**
+
+![Validation pipeline and input panel](frontend/assets/ss1/pipeline.png)
+
+**Results panel — findings table, expanders, and download**
+
+![Results panel with findings table and download buttons](frontend/assets/ss1/results.png)
+
+```bash
+streamlit run streamlit_app.py
+```
+
+---
+
 ## Architecture
 
 **Tier 1 — Ingestion.** Trials are fetched from the ClinicalTrials.gov v2 JSON

@@ -15,7 +15,7 @@ class LogicFinding:
     nct_id: str
     field: str
     detail: str
-    severity: str = "ERROR"
+    severity: str = "HIGH"
     error_type: str = "LOGICAL_CONTRADICTION"
 
 
