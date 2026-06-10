@@ -17,11 +17,11 @@ explanations, and download the original or auto-corrected record.
 
 **Validation pipeline & input panel**
 
-![Validation pipeline and input panel](frontend/assets/ss1/pipeline.png)
+![Validation pipeline and input panel](frontend/assets/pipeline.png)
 
 **Results panel — findings table, expanders, and download**
 
-![Results panel with findings table and download buttons](frontend/assets/ss1/results.png)
+![Results panel with findings table and download buttons](frontend/assets/results.png)
 
 ```bash
 streamlit run streamlit_app.py
